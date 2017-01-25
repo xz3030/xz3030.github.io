@@ -34,5 +34,10 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ``` bash
 $ hexo deploy
 ```
-
 More info: [Deployment](https://hexo.io/docs/deployment.html)
+
+
+### Try to insert an equation
+$$ X = \frac{1}{Y} \mathcal{Q}(S) $$
+
+
