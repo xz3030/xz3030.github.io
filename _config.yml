@@ -8,6 +8,7 @@ subtitle:
 description: a fan of CV, RL and ACG ^_^
 author: xuzhejesse
 language: zh-Hans
+# language: en
 timezone:
 
 # URL
@@ -76,9 +77,6 @@ theme: next
 
 duoshuo_shortname: xz3030
 duoshuo_share: true
-
-toc:
-  maxDepth: 3
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
