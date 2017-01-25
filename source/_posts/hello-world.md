@@ -13,6 +13,8 @@ $ hexo new "My New Post"
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
+<!-- More -->
+
 ### Run server
 
 ``` bash
@@ -36,7 +38,7 @@ $ hexo deploy
 ```
 More info: [Deployment](https://hexo.io/docs/deployment.html)
 
-
+## Unit Tests
 ### Try to insert an equation
 $$ X = \frac{1}{Y} \mathcal{Q}(S) $$
 

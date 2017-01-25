@@ -5,9 +5,9 @@
 # Site
 title: Xz3030's Blog
 subtitle:
-description:
+description: a fan of CV, RL and ACG ^_^
 author: xuzhejesse
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -16,6 +16,7 @@ url: http://xz3030.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+rss: /atom.xml
 
 # Directory
 source_dir: source
@@ -70,10 +71,14 @@ tag: 1
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-##plugins: 
-##  hexo-math
 ## Themes: https://hexo.io/themes/
 theme: next
+
+duoshuo_shortname: xz3030
+duoshuo_share: true
+
+toc:
+  maxDepth: 3
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
