@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Xz3030's Blog
 subtitle:
 description:
 author: xuzhejesse
@@ -70,10 +70,10 @@ tag: 1
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins: 
-  hexo-math
+##plugins: 
+##  hexo-math
 ## Themes: https://hexo.io/themes/
-theme: TKL
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

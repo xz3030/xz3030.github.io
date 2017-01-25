@@ -40,4 +40,13 @@ More info: [Deployment](https://hexo.io/docs/deployment.html)
 ### Try to insert an equation
 $$ X = \frac{1}{Y} \mathcal{Q}(S) $$
 
+### Quote test
+{% blockquote Andrej Karparphy http://karpathy.github.io/2016/05/31/rl/ %}
+RL is hot!
+{% endblockquote %}
 
+### Code test
+{% codeblock lang:python %}
+import pandas as pd
+import gym
+{% endcodeblock %}
