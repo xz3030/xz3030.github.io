@@ -1,7 +1,11 @@
 ---
 title: Hello World
+tags: [test, RL, code]
+categories: [test]
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+<!-- More -->
 
 ## Quick Start
 
@@ -12,8 +16,6 @@ $ hexo new "My New Post"
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
-
-<!-- More -->
 
 ### Run server
 
@@ -52,3 +54,6 @@ RL is hot!
 import pandas as pd
 import gym
 {% endcodeblock %}
+
+### Quote test2
+>I've said that it needs more practice.
