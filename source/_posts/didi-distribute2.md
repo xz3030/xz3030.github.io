@@ -27,7 +27,7 @@ date: 2017-02-03 15:50:32
 　　基于我们的总原则，下面一一讲一下现在线上使用（或进行过实验）的派单策略。
 
 ## 规则过滤
-> 如果身边的滴滴司机没有听到你发的订单，那么他很有可能是命中了反作弊、限号等过滤规则了。若不是，请检查一下司机手机的网络状况，由于种种原因没有听到播单的情况也有超过1%哦。
+> 如果身边的滴滴司机没有听到你发的订单，那么他很有可能是命中了反作弊、限号等过滤规则了。若不是，可能是司机手机的网络状况出了问题，由于种种原因没有听到播单的情况也有超过1%哦。
 
 　　最基本的策略其实是人工设定的规则过滤。必须澄清的一点是这里的规则并不会造成分单时不公平的效果，而完全是为了业务能正常运行而设立的。举几个最基础的例子：
 - 规则A: 快车司机不能接专车订单
@@ -47,7 +47,7 @@ date: 2017-02-03 15:50:32
 
 　　由于用户订单的产生和司机的出现往往并不在同一时间点，在时间维度上贪婪的分单方式（即每个订单出现时即选择附近最近的司机派单）并不能获得全局最优的效果。一个自然的想法就是先让乘客和司机稍等一会，待收集了一段时间的订单和司机信息后，再集中分配。这样，有了相对较多、较密集的订单、司机后，派单策略即可找到更近更合理的派单方式了。
 
-　　找寻司机和订单分配的全局最优是一个 _二分图匹配问题_ (bipartite graph matching) ，可用组合优化中知名的 [_匈牙利算法_](https://en.wikipedia.org/wiki/Hungarian_algorithm) 求解。见下图。实际上，我们线上使用的是匈牙利算法的一个改进： [_Kuhn–Munkres (KM) 算法_](https://www.topcoder.com/community/data-science/data-science-tutorials/assignment-problem-and-hungarian-algorithm/)。
+　　找寻司机和订单分配的全局最优是一个 _二分图匹配问题_ (bipartite graph matching) ，可用组合优化中知名的 [_匈牙利算法_](https://en.wikipedia.org/wiki/Hungarian_algorithm) 求解。见下图。实际上，我们线上使用的是KM算法：[_Kuhn–Munkres (KM) 算法_](https://www.topcoder.com/community/data-science/data-science-tutorials/assignment-problem-and-hungarian-algorithm/)。
 
 ![](/images/km_algorithm.png)
 
