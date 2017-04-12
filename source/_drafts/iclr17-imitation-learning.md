@@ -1,5 +1,5 @@
 ---
-title: 【ICLR论文阅读】Third-Person Imitation Learning
+title: 【ICLR论文阅读】Third-Person Imitation Learning 和前作Generative Adversarial Imitation Learning
 tags: drl
 categories: drl
 ---
@@ -29,7 +29,7 @@ categories: drl
 
 　　推荐这篇文章的另外一个原因，其实是延续自其前作的一个很有意思的思想，即将Generative Adversarial Network (GAN)的思想引入Imitation Learning，把目前大火的 <font color="#FF0000">**GAN**</font> 和 <font color="#FF0000">**RL**</font> 有机的结合在一起。个人浅见，这是目前GAN在实际工业应用中最可能实现突破的一点。
 
-　　理解这篇paper首先需要解释两个问题：1) 什么是imitation learning; 2) 理解其前作：["Generative Adversarial Imitation Learning"](http://papers.nips.cc/paper/6391-generative-adversarial-imitation-learning.pdf) (NIPS 16) [2]。
+　　理解这篇paper首先需要解释两个问题：1) 什么是imitation learning; 2) 理解其前作：["Generative Adversarial Imitation Learning"](http://papers.nips.cc/paper/6391-generative-adversarial-imitation-learning.pdf) (NIPS 16，作者是OpenAI的Jonathan Ho和Stefano Ermon) [2]。
 
 ---
 
@@ -131,13 +131,31 @@ $$\psi^*_{GA}(\rho_\pi - \rho_{\pi_E})-\lambda H(\pi) = \sup_{D\in (0,1)^{\mathc
 
 ![](/images/imitation_learning_paper/algorithm_gail.png "GAIL算法框架")
 
-算法很清晰，第一步用GAN的目标函数拟合cost function，对应于GAN的$D_w(s,a)$ (line4)；第二步根据cost function使用TRPO(Trust Region Policy Optimization，一种policy gradient的改进，用于训练时不容易跑飞)更新策略$\pi_\theta$。重复迭代至收敛即可。
+　　算法很清晰，第一步用GAN的目标函数拟合cost function，对应于GAN的$D_w(s,a)$ (line4)；第二步根据cost function使用TRPO(Trust Region Policy Optimization，一种policy gradient的改进，用于训练时不容易跑飞)更新策略$\pi_\theta$。重复迭代至收敛即可。
+
 
 ## 实验与代码实现
-OpenAI kindly提供了GAIL的代码
-
-
+　　OpenAI kindly提供了GAIL的代码，传上了github：https://github.com/openai/imitation 。时间原因我还没有自己跑哈，测试之后再更新这段。
 　　
 ---
 
 # Third-Person Imitation Learning
+　　理解了GAIL，我们的这篇正文"Third-Person Imitation Learning"就很简单了。个人浅见，这篇文章的主要贡献在于make it possible去做第三人称模仿学习这件事，而算法本身更多的是在现有算法上添砖加瓦，创新点并不是很多。
+
+![](/images/imitation_learning_paper/third_title.png "Third-Person Imitation Learning 网络结构")
+
+　　本文基本的想法，即在GAIL的基础上，引入第三人称和第一人称之间的domain difference，用经典的Deep Domain Adaptation的手段来求解GAIL。具体来说，作者将GAN的网络分成了两部分，前一半低层layers用于提取特征（设其为$D_F$），在两个domain共用；后一半的高层layers则分别对应于expert domain的$D_R$ 和 区分expert和learner的分类器$D_D$。作者用了一个BP过程中翻转梯度方向的trick $\mathcal{G}$，使得$D_R, D_D, D_F$在优化目标中都取$\min$。最终的算法流程图和GAIL相比变化不大，作者同样使用了TRPO作为policy gradient的解法。
+
+![](/images/imitation_learning_paper/algorithm_third.png "Third-Person Imitation Learning 算法框架")
+
+
+---
+
+# 结论
+　　这篇blog借着"Third-Person Imitation Learning"这篇文章，回顾了Imitation Learning的问题设定，及前作将GAN和RL结合起来做imitation learning的算法GAIL，并详细解释了部分的理论推导。
+
+从这篇文章我们可以得到的take-away是：
+- Imitation Learning作为目前高速发展的一个领域，其应用场景在不断的扩展。几年之后机器人的模仿、学习能力就能上一个台阶就说不定。
+- 用IRL的方法做Imitation Learning，其特例的IRL过程可以演化为GAN的形式，通过迭代的方式，优化GAN得到代价函数，再根据代价函数使用policy gradient优化策略，直至收敛。
+- GAIL的想法可以看到一定的CV和NLP领域中的应用，如视频/序列的生成。
+
