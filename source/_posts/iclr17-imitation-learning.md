@@ -4,7 +4,7 @@ title: >-
   Learning
 tags: drl
 categories: drl
-date: 2017-04-13 23:07:31
+date: 2017-04-14 00:10:56
 ---
 
 
@@ -29,7 +29,7 @@ date: 2017-04-13 23:07:31
 
 　　第一篇文章讲一下 ["Third-Person Imitation Learning"](https://arxiv.org/pdf/1703.01703.pdf) [1]，出自OpenAI，挂着Pieter Abbeel和Ilya Sutskever两座大神的名字。正如题目所说，这篇文章讲的是以第三人称视角进行模仿学习(imitation learning)，即学习者通过观察老师的行为，进行模仿并最终实现任务，此过程中不需要学习者以第一人称的视角实际体验该任务，这个设定实际上很符合人类婴儿的学习过程。以后imitation learning可能就不需要agent亲自上场试验啦，想想看机器人仅靠眼睛看人类的行为即可做到模仿、学习，既感到fancy又觉得可怕。
 
-![](http://image76.360doc.com/DownloadImg/2014/06/3017/43037005_1.jpg "模仿学习")
+![](/images/imitation_learning_paper/title.jpg "模仿学习")
 
 　　推荐这篇文章的另外一个原因，其实是延续自其前作的一个很有意思的思想，即将Generative Adversarial Network (GAN)的思想引入Imitation Learning，把目前大火的 <font color="#FF0000">**GAN**</font> 和 <font color="#FF0000">**RL**</font> 有机的结合在一起。个人浅见，这是目前GAN在实际工业应用中最可能实现突破的一点。
 
@@ -51,7 +51,7 @@ $< s_1^i,a_1^i,s_2^i,a_2^2,...,s_n^i>$。将所有的状态-动作对抽离出�
 
 　　实现imitation learning的方式主要有两种。最简单直接可以想到的，即用supervised learning的方法直接去拟合专家轨迹的状态-动作对，作为learner的策略(policy)。这种算法被称为 **Behavioral Cloning**。相关的supervised learning算法，可以想到的例子如RNN (LSTM)，Structural SVM, CRF等。由于传统的supervised learning不考虑agent和环境间的交互，Behavioral Cloning存在着序列行为中累积误差逐渐增大的问题。
 
-![](http://pic2.zhimg.com/v2-2a16ce7ecf9320579bb59c3ca55039c9_r.png "误差累积问题")
+![](/images/imitation_learning_paper/aggreg_error.png "误差累积问题")
 
 　　另一种算法，即 ** IRL (Inverse Reinforcement Learning) **，根据专家的轨迹拟合出其做决策时的cost function，并根据这个cost function进行强化学习(Reinforcement Learning)以实现行为。该算法引入了agent和environment的交互，更适用于时间序列的学习问题。[2]中提到，由于IRL算法在内层循环中需要运行Reinforcement learning这一花费大量时间的过程，其scalability能力很有限，换句话说就是跑的太慢啦，不能解大型问题。
 

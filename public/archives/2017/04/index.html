@@ -27,6 +27,9 @@
 
 
 
+
+
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
@@ -103,7 +106,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -144,36 +147,42 @@
 
 
 
+
+
+
+
   
   
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left  page-archive  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">xz3030's Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xz3030's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-    
-      <p class="site-subtitle"></p>
-    
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -274,7 +283,7 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2017/04/13/iclr17-imitation-learning/" itemprop="url">
+            <a class="post-title-link" href="/2017/04/14/iclr17-imitation-learning/" itemprop="url">
               
                 <span itemprop="name">【DRL论文阅读】Third-Person Imitation Learning 和前作Generative Adversarial Imitation Learning</span>
               
@@ -284,9 +293,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-13T23:07:31+08:00"
-              content="2017-04-13" >
-          04-13
+              datetime="2017-04-14T00:10:56+08:00"
+              content="2017-04-14" >
+          04-14
         </time>
       </div>
 
@@ -302,7 +311,7 @@
   
 
 
-          
+
           </div>
           
 
@@ -334,10 +343,12 @@
                src="/images/avatar.jpg"
                alt="xuzhejesse" />
           <p class="site-author-name" itemprop="name">xuzhejesse</p>
-          <p class="site-description motion-element" itemprop="description">a fan of CV, RL and ACG ^_^</p>
+           
+              <p class="site-description motion-element" itemprop="description">a fan of CV, RL and ACG ^_^</p>
+          
         </div>
         <nav class="site-state motion-element">
-        
+
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
@@ -348,17 +359,21 @@
           
 
           
+            
+            
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -417,7 +432,7 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              Links
+              
             </div>
             <ul class="links-of-blogroll-list">
               
@@ -433,6 +448,8 @@
 
 
       </section>
+
+      
 
       
 
@@ -475,9 +492,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -497,6 +518,10 @@
 
 
   
+
+
+
+
 
 
 
@@ -605,8 +630,15 @@
 
 
 
+
+
+
+
   
-  
+
+
+
+
 
   
 
@@ -616,6 +648,7 @@
 
   
 
+  
 
 </body>
 </html>
