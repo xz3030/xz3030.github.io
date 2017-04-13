@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xz3030.github.io/"/>
-  <updated>2017-04-13T15:07:31.000Z</updated>
+  <updated>2017-04-13T15:29:54.000Z</updated>
   <id>http://xz3030.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xz3030.github.io/2017/04/13/iclr17-imitation-learning/"/>
     <id>http://xz3030.github.io/2017/04/13/iclr17-imitation-learning/</id>
     <published>2017-04-13T15:07:31.000Z</published>
-    <updated>2017-04-13T15:07:31.000Z</updated>
+    <updated>2017-04-13T15:29:54.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　最近终于项目有一定进展，可以有时间看paper啦，撒花~  这个系列扫一下ICLR2017关于DRL的文章，希望能有些insights。</p>
 <p>　　首先说个题外话，ICLR的审稿流程真是可怕，reviewer和author来回好几轮，工作量足够赶上一个journal，没有金刚钻是不敢揽这个瓷器活的。DRL的圈子被Deepmind和OpenAI把持，外人想进去很难，不过现阶段用DRL去做一些其他应用的道路还是很宽的，无论是写paper还是工业界都有着很大的价值，值得follow。</p>
