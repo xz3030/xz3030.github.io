@@ -174,3 +174,13 @@ and Actor-Critic Methods"](https://arxiv.org/pdf/1610.01945.pdf)，文章中分�
 - 用IRL的方法做Imitation Learning，其特例的IRL过程可以演化为GAN的形式，通过迭代的方式，优化GAN得到代价函数，再根据代价函数使用policy gradient优化策略，直至收敛。
 - GAIL的想法可以看到一定的CV和NLP领域中的应用，如视频/序列的生成。
 
+
+---
+
+** 最近访问 ** 
+
+<div class="ds-recent-visitors"
+    data-num-items="36"
+    data-avatar-size="42"
+    id="ds-recent-visitors">
+</div>
