@@ -58,7 +58,7 @@ $< s_1^i,a_1^i,s_2^i,a_2^2,...,s_n^i>$。将所有的状态-动作对抽离出�
 ---
 
 # GAIL (Generative Adversarial Imitation Learning)
-　　这篇前作[2]解决的问题，即调过IRL，直接使用RL中的policy gradient算法学习专家的策略。
+　　这篇前作[2]解决的问题，即跳过IRL，直接使用RL中的policy gradient算法学习专家的策略。
 
 ## IRL 目标函数解释
 　　Inverse Reinforcement Learning，顾名思义，是RL的反过程，即通过行为体某策略的动作轨迹，反推行为体做决策时使用的奖励函数reward或代价函数cost。首先回顾一下符号定义：
