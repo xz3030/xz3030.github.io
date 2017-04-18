@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://xz3030.github.io/images/imitation_learning_paper/algorithm_gail.png">
 <meta property="og:image" content="http://xz3030.github.io/images/imitation_learning_paper/third_title.png">
 <meta property="og:image" content="http://xz3030.github.io/images/imitation_learning_paper/algorithm_third.png">
-<meta property="og:updated_time" content="2017-04-15T11:22:34.000Z">
+<meta property="og:updated_time" content="2017-04-18T02:02:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【DRL论文阅读】Third-Person Imitation Learning 和前作Generative Adversarial Imitation Learning">
 <meta name="twitter:description" content="前言　　最近终于项目有一定进展，可以有时间看paper啦，撒花~  这个系列扫一下ICLR2017关于DRL的文章，希望能有些insights。
@@ -404,7 +404,7 @@
 <p><img src="/images/imitation_learning_paper/aggreg_error.png" alt="" title="误差累积问题"></p>
 <p>　　另一种算法，即 <strong> IRL (Inverse Reinforcement Learning) </strong>，根据专家的轨迹拟合出其做决策时的cost function，并根据这个cost function进行强化学习(Reinforcement Learning)以实现行为。该算法引入了agent和environment的交互，更适用于时间序列的学习问题。[2]中提到，由于IRL算法在内层循环中需要运行Reinforcement learning这一花费大量时间的过程，其scalability能力很有限，换句话说就是跑的太慢啦，不能解大型问题。</p>
 <hr>
-<h1 id="gail-generative-adversarial-imitation-learning"><a href="#GAIL-Generative-Adversarial-Imitation-Learning" class="headerlink" title="GAIL (Generative Adversarial Imitation Learning)"></a>GAIL (Generative Adversarial Imitation Learning)</h1><p>　　这篇前作[2]解决的问题，即调过IRL，直接使用RL中的policy gradient算法学习专家的策略。</p>
+<h1 id="gail-generative-adversarial-imitation-learning"><a href="#GAIL-Generative-Adversarial-Imitation-Learning" class="headerlink" title="GAIL (Generative Adversarial Imitation Learning)"></a>GAIL (Generative Adversarial Imitation Learning)</h1><p>　　这篇前作[2]解决的问题，即跳过IRL，直接使用RL中的policy gradient算法学习专家的策略。</p>
 <h2 id="irl-目标函数解释"><a href="#IRL-目标函数解释" class="headerlink" title="IRL 目标函数解释"></a>IRL 目标函数解释</h2><p>　　Inverse Reinforcement Learning，顾名思义，是RL的反过程，即通过行为体某策略的动作轨迹，反推行为体做决策时使用的奖励函数reward或代价函数cost。首先回顾一下符号定义：</p>
 <ul>
 <li>$\mathcal{S}$表示状态集，$\mathcal{A}$表示动作集；</li>
@@ -483,6 +483,7 @@
 <hr>
 <p><strong> 最近访问 </strong> </p>
 <div class="ds-recent-visitors" data-num-items="36" data-avatar-size="42" id="ds-recent-visitors"><br></div>
+
       
     </div>
 
